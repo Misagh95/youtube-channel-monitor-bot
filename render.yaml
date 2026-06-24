@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: youtube-channel-monitor-bot
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: ADMIN_CHAT_ID
+        sync: false
+      - key: CHECK_INTERVAL
+        value: 300
